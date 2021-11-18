@@ -1,10 +1,10 @@
-package com.example.calculator.ui.home
+package com.example.calculator.ui.engineer
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class HomeViewModel : ViewModel() {
+class EngineerCalculatorModel : ViewModel() {
 
 
 }

@@ -5,197 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.gallery.GalleryFragment">
-
-    <TextView
-        android:id="@+id/line"
-        android:layout_width="match_parent"
-        android:layout_height="1sp"
-        android:layout_weight="5"
-        android:layout_gravity="left"
-        />
+    tools:context=".ui.standart.StandartCalculatorFragment">
 
 
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:padding="1sp"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1.65"
+            android:gravity="center|end"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="55sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1sp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/degrad"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="DEG"
-            android:textSize="20sp"
-            app:iconPadding="5dp" />
-
-        <Button
-            android:id="@+id/sin"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="sin"
-            android:textSize="20sp"
-            app:iconPadding="5dp" />
-
-        <Button
-            android:id="@+id/cos"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="cos"
-            android:textSize="20sp"
-            app:iconPadding="5dp" />
-
-        <Button
-            android:id="@+id/tan"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="tan"
-            android:textSize="20sp"
-            app:iconPadding="5dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1sp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/e"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="e"
-            android:textSize="20sp"
-            app:iconPadding="5dp" />
-
-        <Button
-            android:id="@+id/ln"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="ln"
-            android:textSize="20sp"
-            app:iconPadding="5dp" />
-
-        <Button
-            android:id="@+id/log"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="log"
-            android:textSize="20sp"
-            app:iconPadding="5dp" />
-
-        <Button
-            android:id="@+id/percent"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="%"
-            android:textSize="20sp"
-            app:iconPadding="5dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1sp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/sqrt"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="√"
-            android:textSize="20sp"
-            app:iconPadding="5dp" />
-
-        <Button
-            android:id="@+id/pi"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="π"
-            android:textSize="20sp"
-            app:iconPadding="5dp" />
-
-        <Button
-            android:id="@+id/exp"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="^"
-            android:textSize="20sp"
-            app:iconPadding="5dp" />
-
-        <Button
-            android:id="@+id/factorial"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="!"
-            android:textSize="20sp"
-            app:iconPadding="5dp" />
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -496,4 +321,5 @@
             app:iconPadding="5dp" />
 
     </LinearLayout>
+
 </LinearLayout>

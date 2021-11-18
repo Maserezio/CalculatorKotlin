@@ -18,9 +18,8 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:popupTheme="@style/Theme.Calculator.PopupOverlay" />
+        android:layout_height="50sp"
+        android:background="?attr/colorPrimary"/>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
