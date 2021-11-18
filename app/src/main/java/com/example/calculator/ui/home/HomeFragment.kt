@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.calculator.R
 import com.example.calculator.databinding.FragmentHomeBinding
 
+
 class HomeFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
@@ -30,13 +31,17 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
         return root
+
+
+
     }
+
+//    fun setTextField(str: String)
+//    {
+//        R.id.line.append(str)
+//    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
