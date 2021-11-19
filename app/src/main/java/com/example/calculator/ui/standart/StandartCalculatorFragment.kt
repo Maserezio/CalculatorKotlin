@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.calculator.databinding.StandartCalculatorBinding
 import kotlinx.android.synthetic.main.standart_calculator.*
 import net.objecthunter.exp4j.ExpressionBuilder
+import kotlin.math.roundToInt
 
 class StandartCalculatorFragment : Fragment() {
 
@@ -48,6 +49,7 @@ class StandartCalculatorFragment : Fragment() {
         minus.setOnClickListener{ setFieldText("-") }
         plus.setOnClickListener{ setFieldText("+") }
         dot.setOnClickListener{ setFieldText(".") }
+
         all_clear.setOnClickListener{ line.setText("") }
         backspace.setOnClickListener {
             val str = line.text.toString()
@@ -58,15 +60,7 @@ class StandartCalculatorFragment : Fragment() {
         equals.setOnClickListener {
             try {
                 val ex = ExpressionBuilder(line.text.toString()).build()
-                val res = ex.evaluate()
-                val longRes = res.toLong()
-
-                if(res==longRes.toDouble()){
-                    line.text = longRes.toString()
-                }
-                else{
-                    line.text = res.toString()
-                }
+                line.text = ex.evaluate().toString()
 
             } catch (e:Exception) {
                 Log.d("error:", e.message.toString())
