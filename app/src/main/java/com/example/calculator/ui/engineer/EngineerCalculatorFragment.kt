@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.engineer_calculator.*
 import net.objecthunter.exp4j.ExpressionBuilder
 import net.objecthunter.exp4j.operator.Operator
 import net.objecthunter.exp4j.function.Function
+import kotlin.math.log10
 
 
 class EngineerCalculatorFragment : Fragment() {
@@ -64,6 +65,12 @@ class EngineerCalculatorFragment : Fragment() {
         pi.setOnClickListener { setFieldText("π") }
         exp.setOnClickListener { setFieldText("^") }
         factorial.setOnClickListener { setFieldText("!") }
+        degrad.setOnClickListener {
+            if(degrad.text =="DEG")
+                degrad.text = "RAD"
+            else
+                degrad.text = "DEG"
+        }
         backspace.setOnClickListener {
             val str = eline.text.toString()
             if(str.isNotEmpty()){
@@ -71,8 +78,7 @@ class EngineerCalculatorFragment : Fragment() {
             }
         }
 
-        val factorial: Operator = object :
-            Operator(
+        val factorial: Operator = object :Operator(
                 "!",
                 1,
                 true,
@@ -80,8 +86,8 @@ class EngineerCalculatorFragment : Fragment() {
             ) {
             override fun apply(vararg args: Double): Double {
                 val arg = args[0].toInt()
-                require(arg.toDouble() == args[0]) //{ "Operand for factorial has to be an integer" }
-                require(arg >= 0) //{ "The operand of the factorial can not be less than zero" }
+                require(arg.toDouble() == args[0])
+                require(arg >= 0)
                 var result = 1.0
                 for (i in 1..arg) {
                     result *= i.toDouble()
@@ -89,18 +95,25 @@ class EngineerCalculatorFragment : Fragment() {
                 return result
             }
         }
+        val percent: Operator = object :Operator(
+            "%",
+            1,
+            true,
+            PRECEDENCE_POWER + 1
+        ) {
+            override fun apply(vararg args: Double): Double {
+                return 0.01*args[0]
+            }
+        }
         val ln: Function = object: Function("ln", 1) {
             override  fun apply(vararg args: Double): Double {
-                return 2.303 * Math.log10(args[0])
+                return 2.303 * log10(args[0])
             }
         }
         equals.setOnClickListener {
             try {
-
-
-
-
-                val ex = ExpressionBuilder(eline.text.toString()).operator(factorial).function(ln).build()
+                
+                val ex = ExpressionBuilder(eline.text.toString()).operator(factorial).operator(percent).function(ln).build()
                 eline.text = ex.evaluate().toString()
 
             } catch (e:Exception) {

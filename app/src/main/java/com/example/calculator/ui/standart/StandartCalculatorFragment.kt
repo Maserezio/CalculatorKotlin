@@ -71,7 +71,7 @@ class StandartCalculatorFragment : Fragment() {
 
     private fun setFieldText(str: String)
     {
-        line.append(str)
+            line.append(str)
     }
 
     override fun onDestroyView() {
