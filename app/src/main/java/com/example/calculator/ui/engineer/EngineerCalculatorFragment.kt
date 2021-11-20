@@ -12,8 +12,7 @@ import kotlinx.android.synthetic.main.engineer_calculator.*
 import net.objecthunter.exp4j.ExpressionBuilder
 import net.objecthunter.exp4j.operator.Operator
 import net.objecthunter.exp4j.function.Function
-import java.lang.Math.*
-import kotlin.math.log10
+import kotlin.math.*
 
 
 class EngineerCalculatorFragment : Fragment() {
