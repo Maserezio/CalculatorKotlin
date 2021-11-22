@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.standart.StandartCalculatorFragment">
+    tools:context=".StandartCalculatorFragment">
 
-
+    <!--TODO : scrollable textview -->
         <TextView
             android:id="@+id/line"
             android:layout_width="match_parent"

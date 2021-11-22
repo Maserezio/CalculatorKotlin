@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.calculator.ui.standart.StandartCalculatorFragment"
+        android:name="com.example.calculator.StandartCalculatorFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/standart_calculator" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.calculator.ui.engineer.EngineerCalculatorFragment"
+        android:name="com.example.calculator.EngineerCalculatorFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/engineer_calculator" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.calculator.ui.slideshow.SlideshowFragment"
+        android:name="com.example.calculator.GraphingCalculatorFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/graphing_calculator" />
 </navigation>
