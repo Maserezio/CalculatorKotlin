@@ -1,4 +1,4 @@
-package com.example.calculator.ui.engineer
+package com.example.calculator
 
 import android.os.Bundle
 import android.util.Log
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+
 import com.example.calculator.databinding.EngineerCalculatorBinding
 import kotlinx.android.synthetic.main.engineer_calculator.*
 import net.objecthunter.exp4j.ExpressionBuilder
@@ -17,9 +17,7 @@ import kotlin.math.*
 
 class EngineerCalculatorFragment : Fragment() {
 
-    private lateinit var engineerCalculatorModel: EngineerCalculatorModel
     private var _binding: EngineerCalculatorBinding? = null
-
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -27,9 +25,6 @@ class EngineerCalculatorFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        engineerCalculatorModel =
-            ViewModelProvider(this).get(EngineerCalculatorModel::class.java)
-
         _binding = EngineerCalculatorBinding.inflate(inflater, container, false)
         val root: View = binding.root
         return root
@@ -131,7 +126,7 @@ class EngineerCalculatorFragment : Fragment() {
         equals.setOnClickListener {
             try {
 
-
+        //todo: good output
                 if (degrad.text == "RAD") {
                     val ex = ExpressionBuilder(eline.text.toString())
                         .operator(factorial)

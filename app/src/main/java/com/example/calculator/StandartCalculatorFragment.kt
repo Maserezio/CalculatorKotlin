@@ -1,4 +1,4 @@
-package com.example.calculator.ui.standart
+package com.example.calculator
 
 import android.os.Bundle
 import android.util.Log
@@ -6,14 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import com.example.calculator.databinding.StandartCalculatorBinding
 import kotlinx.android.synthetic.main.standart_calculator.*
 import net.objecthunter.exp4j.ExpressionBuilder
 
 class StandartCalculatorFragment : Fragment() {
 
-    private lateinit var standartCalculatorModel: StandartCalculatorModel
+
     private var _binding: StandartCalculatorBinding? = null
     private val binding get() = _binding!!
 
@@ -22,8 +21,6 @@ class StandartCalculatorFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        standartCalculatorModel = ViewModelProvider(this).get(StandartCalculatorModel::class.java)
-
         _binding = StandartCalculatorBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
@@ -51,6 +48,7 @@ class StandartCalculatorFragment : Fragment() {
 
         all_clear.setOnClickListener{ line.setText("") }
         backspace.setOnClickListener {
+            //todo: good output
             val str = line.text.toString()
             if(str.isNotEmpty()){
                 line.text = str.substring(0, str.length-1)
