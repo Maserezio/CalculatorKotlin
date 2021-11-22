@@ -10,15 +10,16 @@
     <com.jjoe64.graphview.GraphView
         android:layout_marginTop="50sp"
         android:id="@+id/graph"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
         android:layout_height="1sp"
         android:layout_weight="9.7" />
 
-    <Button
-        android:id="@+id/button3"
+    <EditText
+        android:id="@+id/input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.01"
-        android:text="Add" />
+        android:text="sin(x)" />
 
 </LinearLayout>
