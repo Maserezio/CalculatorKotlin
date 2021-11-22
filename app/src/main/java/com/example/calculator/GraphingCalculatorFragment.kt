@@ -12,9 +12,6 @@ import kotlinx.android.synthetic.main.graphing_calculator.*
 import net.objecthunter.exp4j.ExpressionBuilder
 
 
-
-
-
 class GraphingCalculatorFragment : Fragment() {
 
     private var _binding: GraphingCalculatorBinding? = null
@@ -32,39 +29,32 @@ class GraphingCalculatorFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val graph:GraphView = binding.graph
-        graph.getViewport().setScalable(true)
+        val graph: GraphView = binding.graph
+        graph.viewport.setScalable(true)
+        graph.viewport.setMaxY(50.0)
+        graph.viewport.setMaxX(50.0)
+        graph.viewport.setMinY(-50.0)
+        graph.viewport.setMinX(-50.0)
 
-
-
-//        val series: LineGraphSeries<DataPoint> = LineGraphSeries<DataPoint>()
-//
-//        var x : Double = 0.0;
-//        var y : Double = 0.0
-//        x = -50.0
-//
-//        for (i in 0..500)
-//        {
-//            x += 0.1
-//            y = (input.text).toString().toDouble()
-//            series.appendData(DataPoint(x,y), true, 5000)
-//        }
-//
-//        graph.addSeries(series)
-
-
-
-        val series = LineGraphSeries(
-            arrayOf<DataPoint>(
-                DataPoint(0.0, ExpressionBuilder("sin(x)").variable("x").build().setVariable("x", 0.0).evaluate().toDouble()),
-                DataPoint(1.0, ExpressionBuilder("sin(x)").variable("x").build().setVariable("x", 1.0).evaluate().toDouble()),
-                DataPoint(2.0, ExpressionBuilder("sin(x)").variable("x").build().setVariable("x", 2.0).evaluate().toDouble()),
-                DataPoint(3.0, ExpressionBuilder("sin(x)").variable("x").build().setVariable("x", 3.0).evaluate().toDouble()),
-                DataPoint(4.0, ExpressionBuilder("sin(x)").variable("x").build().setVariable("x", 4.0).evaluate().toDouble() )
-            )
-        )
-        graph.addSeries(series)
-
+        build.setOnClickListener {
+            graph.removeAllSeries()
+            val series: LineGraphSeries<DataPoint> = LineGraphSeries<DataPoint>()
+            var x: Double = -50.0;
+            for (i in 0..1000) {
+                x += 0.1
+                series.appendData(
+                    DataPoint
+                        (
+                        x,
+                        ExpressionBuilder(input.text.toString()).variable("x").build()
+                            .setVariable("x", x).evaluate()
+                    ),
+                    true,
+                    5000
+                )
+            }
+            graph.addSeries(series)
+        }
     }
 
 
