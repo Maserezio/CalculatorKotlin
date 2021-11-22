@@ -10,7 +10,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.calculator.databinding.StandartCalculatorBinding
 import kotlinx.android.synthetic.main.standart_calculator.*
 import net.objecthunter.exp4j.ExpressionBuilder
-import kotlin.math.roundToInt
 
 class StandartCalculatorFragment : Fragment() {
 
