@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Калькулятор</string>
+    <string name="nav_header_title">Калькулятор</string>
+    <string name="nav_header_desc">Навигация</string>
+    <string name="action_settings">Опции</string>
+
+    <string name="menu_home">Стандартный</string>
+    <string name="menu_gallery">Инженерный</string>
+    <string name="menu_slideshow">Графический</string>
+
+    <string name="add_graph">Добавить</string>
+
+    <string name="theme_header">Тема</string>
+    <string name="theme_light">Светлая</string>
+    <string name="theme_dark">Темная</string>
+    <string name="theme_sys">Системная</string>
+
+    <string name="lang_header">Язык</string>
+    <string name="lang_rus">Русский</string>
+    <string name="lang_eng">Английский</string>
+    <string name="lang_sys">Системный</string>
+
+    <string name="cancel_opt">Отмена</string>
+    <string name="apply_opt">Принять</string>
+
+</resources>
