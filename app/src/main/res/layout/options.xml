@@ -23,19 +23,19 @@
             android:layout_height="match_parent">
 
             <RadioButton
-                android:id="@+id/radioButton1"
+                android:id="@+id/light_theme_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/theme_light" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/dark_theme_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/theme_dark" />
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/system_theme_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/theme_sys" />
@@ -63,19 +63,19 @@
             android:layout_height="match_parent">
 
             <RadioButton
-                android:id="@+id/radioButton4"
+                android:id="@+id/rus_lang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/lang_rus" />
 
             <RadioButton
-                android:id="@+id/radioButton5"
+                android:id="@+id/eng_lang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/lang_eng" />
 
             <RadioButton
-                android:id="@+id/radioButton6"
+                android:id="@+id/sys_lang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/lang_sys" />
@@ -91,20 +91,14 @@
 
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/close_opt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/cancel_opt"
+            android:text="@string/close_opt"
             android:layout_margin="8sp"/>
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/apply_opt"
-            android:layout_margin="8sp"/>
+
     </LinearLayout>
 
 </LinearLayout>

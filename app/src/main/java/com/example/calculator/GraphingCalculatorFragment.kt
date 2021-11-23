@@ -37,7 +37,6 @@ class GraphingCalculatorFragment : Fragment() {
         graph.viewport.setMinX(-50.0)
 
         build.setOnClickListener {
-
             val series: LineGraphSeries<DataPoint> = LineGraphSeries<DataPoint>()
             var x: Double = -50.0;
             for (i in 0..1000) {

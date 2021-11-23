@@ -48,7 +48,7 @@ class StandartCalculatorFragment : Fragment() {
 
         all_clear.setOnClickListener{ line.setText("") }
         backspace.setOnClickListener {
-            //todo: good output
+
             val str = line.text.toString()
             if(str.isNotEmpty()){
                 line.text = str.substring(0, str.length-1)
@@ -56,6 +56,7 @@ class StandartCalculatorFragment : Fragment() {
         }
         equals.setOnClickListener {
             try {
+                //todo: good output
                 val ex = ExpressionBuilder(line.text.toString()).build()
                 line.text = ex.evaluate().toString()
 

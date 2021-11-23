@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
+import kotlinx.android.synthetic.main.options.*
 
 class Options : DialogFragment() {
 
@@ -17,5 +18,15 @@ class Options : DialogFragment() {
 
         return rootView
     }
-    // todo: optios logic
+    // todo: lan and theme change
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        close_opt.setOnClickListener {
+            dismiss()
+        }
+
+    }
 }
+

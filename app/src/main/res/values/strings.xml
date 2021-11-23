@@ -20,7 +20,6 @@
     <string name="lang_eng">English</string>
     <string name="lang_sys">System</string>
 
-    <string name="cancel_opt">Cancel</string>
-    <string name="apply_opt">Apply</string>
+    <string name="close_opt">Close</string>
 
 </resources>

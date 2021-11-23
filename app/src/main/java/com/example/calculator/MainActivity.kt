@@ -16,10 +16,13 @@ import com.example.calculator.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.*
 import android.content.Intent
 import android.widget.Toast
+import com.zeugmasolutions.localehelper.LocaleAwareCompatActivity
+import com.zeugmasolutions.localehelper.Locales
 import kotlinx.android.synthetic.main.engineer_calculator.*
+import java.util.*
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : LocaleAwareCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
@@ -57,11 +60,12 @@ class MainActivity : AppCompatActivity() {
         return when (item.itemId) {
             R.id.action_settings -> {
                 val dialog = Options()
-                dialog.show(supportFragmentManager, "bebra")
+                dialog.show(supportFragmentManager, "Options")
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
+
     }
 
 
