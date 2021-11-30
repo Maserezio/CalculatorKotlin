@@ -7,19 +7,23 @@
     android:orientation="vertical"
     tools:context=".EngineerCalculatorFragment">
 
-    <!--TODO : scrollable textview -->
-
-    <TextView
-        android:id="@+id/eline"
+    <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="1sp"
-        android:padding="1sp"
-        android:layout_marginTop="50dp"
-        android:layout_weight="4"
-        android:gravity="center|end"
-        android:singleLine="true"
-        android:textColor="@color/black"
-        android:textSize="55sp" />
+        android:layout_height="16sp"
+        android:layout_weight="1.65">
+        <TextView
+            android:id="@+id/eline"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:padding="10dp"
+            android:layout_gravity="center|start"
+            android:ellipsize="start"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="55sp"
+            android:scrollHorizontally="true"/>
+    </HorizontalScrollView>
 
 
     <LinearLayout

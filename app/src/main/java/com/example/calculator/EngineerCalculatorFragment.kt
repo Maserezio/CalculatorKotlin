@@ -106,19 +106,19 @@ class EngineerCalculatorFragment : Fragment() {
             }
         }
 
-        val dsin : Function = object : Function("sin", 1) {
+        val dsin: Function = object : Function("sin", 1) {
             override fun apply(vararg args: Double): Double {
-                return sin(args[0]/57.29577951308)
+                return sin(args[0] / 57.29577951308)
             }
         }
-        val dcos : Function = object : Function("cos", 1) {
+        val dcos: Function = object : Function("cos", 1) {
             override fun apply(vararg args: Double): Double {
-                return cos(args[0]/57.29577951308)
+                return cos(args[0] / 57.29577951308)
             }
         }
-        val dtan : Function = object : Function("tan", 1) {
+        val dtan: Function = object : Function("tan", 1) {
             override fun apply(vararg args: Double): Double {
-                return tan(args[0]/57.29577951308)
+                return tan(args[0] / 57.29577951308)
             }
         }
 
@@ -126,14 +126,15 @@ class EngineerCalculatorFragment : Fragment() {
         equals.setOnClickListener {
             try {
 
-        //todo: good output
                 if (degrad.text == "RAD") {
                     val ex = ExpressionBuilder(eline.text.toString())
                         .operator(factorial)
                         .operator(percent)
                         .function(ln)
                         .build()
-                    eline.text = ex.evaluate().toString()
+                    eline.text =
+                        if (ex.evaluate().toString().endsWith(".0")) ex.evaluate().toString()
+                            .dropLast(2) else ex.evaluate().toString()
                 } else {
                     val ex = ExpressionBuilder(eline.text.toString())
                         .operator(factorial)
@@ -143,7 +144,9 @@ class EngineerCalculatorFragment : Fragment() {
                         .function(dcos)
                         .function(dtan)
                         .build()
-                    eline.text = ex.evaluate().toString()
+                    eline.text =
+                        if (ex.evaluate().toString().endsWith(".0")) ex.evaluate().toString()
+                            .dropLast(2) else ex.evaluate().toString()
                 }
             } catch (e: Exception) {
                 Log.d("error:", e.message.toString())

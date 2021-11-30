@@ -7,18 +7,23 @@
     android:orientation="vertical"
     tools:context=".StandartCalculatorFragment">
 
-    <!--TODO : scrollable textview -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="16sp"
+        android:layout_weight="1.65">
         <TextView
             android:id="@+id/line"
-            android:layout_width="match_parent"
-            android:layout_height="1sp"
-            android:padding="1sp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginTop="50dp"
-            android:layout_weight="1.65"
-            android:gravity="center|end"
+            android:padding="10dp"
+            android:layout_gravity="center|start"
+            android:ellipsize="start"
             android:singleLine="true"
             android:textColor="@color/black"
-            android:textSize="55sp" />
+            android:textSize="55sp"
+            android:scrollHorizontally="true"/>
+    </HorizontalScrollView>
 
 
 

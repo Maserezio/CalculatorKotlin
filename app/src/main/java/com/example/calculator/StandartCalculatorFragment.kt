@@ -28,48 +28,47 @@ class StandartCalculatorFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        zero.setOnClickListener{ setFieldText("0") }
-        one.setOnClickListener{ setFieldText("1") }
-        two.setOnClickListener{ setFieldText("2") }
-        three.setOnClickListener{ setFieldText("3") }
-        four.setOnClickListener{ setFieldText("4") }
-        five.setOnClickListener{ setFieldText("5") }
-        six.setOnClickListener{ setFieldText("6") }
-        seven.setOnClickListener{ setFieldText("7") }
-        eight.setOnClickListener{ setFieldText("8") }
-        nine.setOnClickListener{ setFieldText("9") }
-        l_bracket.setOnClickListener{ setFieldText("(") }
-        r_bracket.setOnClickListener{ setFieldText(")") }
-        divide.setOnClickListener{ setFieldText("/") }
-        multiply.setOnClickListener{ setFieldText("*") }
-        minus.setOnClickListener{ setFieldText("-") }
-        plus.setOnClickListener{ setFieldText("+") }
-        dot.setOnClickListener{ setFieldText(".") }
+        zero.setOnClickListener { setFieldText("0") }
+        one.setOnClickListener { setFieldText("1") }
+        two.setOnClickListener { setFieldText("2") }
+        three.setOnClickListener { setFieldText("3") }
+        four.setOnClickListener { setFieldText("4") }
+        five.setOnClickListener { setFieldText("5") }
+        six.setOnClickListener { setFieldText("6") }
+        seven.setOnClickListener { setFieldText("7") }
+        eight.setOnClickListener { setFieldText("8") }
+        nine.setOnClickListener { setFieldText("9") }
+        l_bracket.setOnClickListener { setFieldText("(") }
+        r_bracket.setOnClickListener { setFieldText(")") }
+        divide.setOnClickListener { setFieldText("/") }
+        multiply.setOnClickListener { setFieldText("*") }
+        minus.setOnClickListener { setFieldText("-") }
+        plus.setOnClickListener { setFieldText("+") }
+        dot.setOnClickListener { setFieldText(".") }
 
-        all_clear.setOnClickListener{ line.setText("") }
+        all_clear.setOnClickListener { line.setText("") }
         backspace.setOnClickListener {
 
             val str = line.text.toString()
-            if(str.isNotEmpty()){
-                line.text = str.substring(0, str.length-1)
+            if (str.isNotEmpty()) {
+                line.text = str.substring(0, str.length - 1)
             }
         }
         equals.setOnClickListener {
             try {
-                //todo: good output
                 val ex = ExpressionBuilder(line.text.toString()).build()
-                line.text = ex.evaluate().toString()
+                line.text = if (ex.evaluate().toString().endsWith(".0")) ex.evaluate().toString()
+                    .dropLast(2) else ex.evaluate().toString()
 
-            } catch (e:Exception) {
+            } catch (e: Exception) {
                 Log.d("error:", e.message.toString())
 
             }
         }
     }
 
-    private fun setFieldText(str: String)
-    {
-            line.append(str)
+    private fun setFieldText(str: String) {
+        line.append(str)
     }
 
     override fun onDestroyView() {
