@@ -50,8 +50,8 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_settings -> {
-                val dialog = Theme()
-                dialog.show(supportFragmentManager, "Options")
+                val dialog = ThemeDialogFragment()
+                dialog.show(supportFragmentManager, "Choose theme")
                 true
             }
             else -> super.onOptionsItemSelected(item)

@@ -6,13 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.calculator.databinding.StandartCalculatorBinding
-import kotlinx.android.synthetic.main.standart_calculator.*
+import com.example.calculator.databinding.StandardCalculatorBinding
+import kotlinx.android.synthetic.main.standard_calculator.*
 import net.objecthunter.exp4j.ExpressionBuilder
 
-class StandartCalculatorFragment : Fragment() {
+class StandardCalculatorFragment : Fragment() {
 
-    private var _binding: StandartCalculatorBinding? = null
+    private var _binding: StandardCalculatorBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -20,7 +20,7 @@ class StandartCalculatorFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = StandartCalculatorBinding.inflate(inflater, container, false)
+        _binding = StandardCalculatorBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         return root

@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/st_calc"
-        android:name="com.example.calculator.StandartCalculatorFragment"
+        android:name="com.example.calculator.StandardCalculatorFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/standart_calculator" />
+        tools:layout="@layout/standard_calculator" />
 
     <fragment
         android:id="@+id/eng_calc"

@@ -4,9 +4,9 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Choose theme</string>
 
-    <string name="menu_home">Standart</string>
+    <string name="menu_home">Standard</string>
     <string name="menu_gallery">Engineer</string>
-    <string name="menu_slideshow">Graphic</string>
+    <string name="menu_slideshow">Graphics</string>
 
     <string name="add_graph">Add</string>
 
@@ -14,11 +14,6 @@
     <string name="theme_light">Light</string>
     <string name="theme_dark">Dark</string>
     <string name="theme_sys">System</string>
-
-    <string name="lang_header">Language</string>
-    <string name="lang_rus">Russian</string>
-    <string name="lang_eng">English</string>
-    <string name="lang_sys">System</string>
 
     <string name="close_opt">Close</string>
     <string name="apply_opt">Apply</string>

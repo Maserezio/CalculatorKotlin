@@ -6,11 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
+
 import androidx.fragment.app.DialogFragment
 import kotlinx.android.synthetic.main.theme.*
 
 
-class Theme : DialogFragment() {
+class ThemeDialogFragment : DialogFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,8 +24,6 @@ class Theme : DialogFragment() {
         return rootView
     }
 
-    //TODO:theme switch
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -32,9 +32,17 @@ class Theme : DialogFragment() {
         }
 
         apply_opt.setOnClickListener {
-            val toast = Toast.makeText(view.context, "Theme", Toast.LENGTH_SHORT)
-            toast.show()
+            when {
+                light_theme_button.isChecked -> {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                }
+                dark_theme_button.isChecked -> {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                }
+                system_theme_button.isChecked -> {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+                }
+            }
         }
-
     }
 }
