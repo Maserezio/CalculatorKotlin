@@ -94,6 +94,19 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/pi"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="5dp"
+            android:insetTop="5dp"
+            android:insetRight="5dp"
+            android:insetBottom="5dp"
+            android:text="π"
+            android:textSize="20sp"
+            app:iconPadding="5dp" />
+
+        <Button
             android:id="@+id/e"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -103,19 +116,6 @@
             android:insetRight="5dp"
             android:insetBottom="5dp"
             android:text="e"
-            android:textSize="20sp"
-            app:iconPadding="5dp" />
-
-        <Button
-            android:id="@+id/ln"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="ln"
             android:textSize="20sp"
             app:iconPadding="5dp" />
 
@@ -133,6 +133,27 @@
             app:iconPadding="5dp" />
 
         <Button
+            android:id="@+id/ln"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="5dp"
+            android:insetTop="5dp"
+            android:insetRight="5dp"
+            android:insetBottom="5dp"
+            android:text="ln"
+            android:textSize="20sp"
+            app:iconPadding="5dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
             android:id="@+id/percent"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -145,13 +166,18 @@
             android:textSize="20sp"
             app:iconPadding="5dp" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1sp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        <Button
+            android:id="@+id/factorial"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="5dp"
+            android:insetTop="5dp"
+            android:insetRight="5dp"
+            android:insetBottom="5dp"
+            android:text="!"
+            android:textSize="20sp"
+            app:iconPadding="5dp" />
 
         <Button
             android:id="@+id/sqrt"
@@ -167,19 +193,6 @@
             app:iconPadding="5dp" />
 
         <Button
-            android:id="@+id/pi"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="π"
-            android:textSize="20sp"
-            app:iconPadding="5dp" />
-
-        <Button
             android:id="@+id/exp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -189,19 +202,6 @@
             android:insetRight="5dp"
             android:insetBottom="5dp"
             android:text="^"
-            android:textSize="20sp"
-            app:iconPadding="5dp" />
-
-        <Button
-            android:id="@+id/factorial"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="!"
             android:textSize="20sp"
             app:iconPadding="5dp" />
 

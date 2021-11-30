@@ -9,13 +9,8 @@ import androidx.fragment.app.Fragment
 import com.example.calculator.databinding.StandartCalculatorBinding
 import kotlinx.android.synthetic.main.standart_calculator.*
 import net.objecthunter.exp4j.ExpressionBuilder
-import android.R
-
-import android.widget.ScrollView
-
 
 class StandartCalculatorFragment : Fragment() {
-
 
     private var _binding: StandartCalculatorBinding? = null
     private val binding get() = _binding!!

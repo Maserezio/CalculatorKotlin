@@ -51,7 +51,7 @@ class GraphingCalculatorFragment : Fragment() {
             graph.addSeries(series)
         }
 
-        clear.setOnClickListener { graph.removeAllSeries()  }
+        clear.setOnClickListener { graph.removeAllSeries() }
     }
 
 

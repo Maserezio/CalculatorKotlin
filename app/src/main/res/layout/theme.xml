@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,46 +47,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="16sp">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/lang_header"
-            android:textSize="28sp"
-            android:textStyle="bold" />
-
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <RadioButton
-                android:id="@+id/rus_lang"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/lang_rus" />
-
-            <RadioButton
-                android:id="@+id/eng_lang"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/lang_eng" />
-
-            <RadioButton
-                android:id="@+id/sys_lang"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/lang_sys" />
-
-        </RadioGroup>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
 
@@ -96,6 +56,13 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/close_opt"
+            android:layout_margin="8sp"/>
+        <Button
+            android:id="@+id/apply_opt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/apply_opt"
             android:layout_margin="8sp"/>
 
 
