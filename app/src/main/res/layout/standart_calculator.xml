@@ -8,23 +8,23 @@
     tools:context=".StandartCalculatorFragment">
 
     <HorizontalScrollView
+        android:id="@+id/scroll_line"
         android:layout_width="match_parent"
         android:layout_height="16sp"
+        android:layout_marginTop="50dp"
         android:layout_weight="1.65">
+
         <TextView
             android:id="@+id/line"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
-            android:padding="10dp"
-            android:layout_gravity="center|start"
-            android:ellipsize="start"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:ellipsize="end"
             android:singleLine="true"
+            android:textAlignment="viewEnd"
             android:textColor="@color/black"
-            android:textSize="55sp"
-            android:scrollHorizontally="true"/>
+            android:textSize="55sp" />
     </HorizontalScrollView>
-
 
 
     <LinearLayout

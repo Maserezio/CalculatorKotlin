@@ -31,16 +31,12 @@ class GraphingCalculatorFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val graph: GraphView = binding.graph
         graph.viewport.setScalable(true)
-        graph.viewport.setMaxY(50.0)
-        graph.viewport.setMaxX(50.0)
-        graph.viewport.setMinY(-50.0)
-        graph.viewport.setMinX(-50.0)
 
         build.setOnClickListener {
             val series: LineGraphSeries<DataPoint> = LineGraphSeries<DataPoint>()
             var x: Double = -50.0;
-            for (i in 0..1000) {
-                x += 0.1
+            for (i in 0..10000) {
+                x += 0.01
                 series.appendData(
                     DataPoint
                         (
@@ -49,7 +45,7 @@ class GraphingCalculatorFragment : Fragment() {
                             .setVariable("x", x).evaluate()
                     ),
                     true,
-                    5000
+                    50000
                 )
             }
             graph.addSeries(series)

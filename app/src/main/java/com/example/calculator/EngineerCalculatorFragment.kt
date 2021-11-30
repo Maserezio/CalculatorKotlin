@@ -31,41 +31,154 @@ class EngineerCalculatorFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        ezero.setOnClickListener { setFieldText("0") }
-        one.setOnClickListener { setFieldText("1") }
-        two.setOnClickListener { setFieldText("2") }
-        three.setOnClickListener { setFieldText("3") }
-        four.setOnClickListener { setFieldText("4") }
-        five.setOnClickListener { setFieldText("5") }
-        six.setOnClickListener { setFieldText("6") }
-        seven.setOnClickListener { setFieldText("7") }
-        eight.setOnClickListener { setFieldText("8") }
-        nine.setOnClickListener { setFieldText("9") }
-        l_bracket.setOnClickListener { setFieldText("(") }
-        r_bracket.setOnClickListener { setFieldText(")") }
-        divide.setOnClickListener { setFieldText("/") }
-        multiply.setOnClickListener { setFieldText("*") }
-        minus.setOnClickListener { setFieldText("-") }
-        plus.setOnClickListener { setFieldText("+") }
-        dot.setOnClickListener { setFieldText(".") }
-        all_clear.setOnClickListener { eline.setText("") }
-        sin.setOnClickListener { setFieldText("sin(") }
-        cos.setOnClickListener { setFieldText("cos(") }
-        tan.setOnClickListener { setFieldText("tan(") }
-        e.setOnClickListener { setFieldText("e") }
-        ln.setOnClickListener { setFieldText("ln(") }
-        log.setOnClickListener { setFieldText("log(") }
-        percent.setOnClickListener { setFieldText("%") }
-        sqrt.setOnClickListener { setFieldText("sqrt(") }
-        pi.setOnClickListener { setFieldText("π") }
-        exp.setOnClickListener { setFieldText("^") }
-        factorial.setOnClickListener { setFieldText("!") }
-        degrad.setOnClickListener {
-            if (degrad.text == "DEG")
-                degrad.text = "RAD"
-            else
-                degrad.text = "DEG"
+        ezero.setOnClickListener {
+            setFieldText("0")
+            scroll_line.scrollTo(eline.right, 0)
         }
+
+        one.setOnClickListener {
+            setFieldText("1")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        two.setOnClickListener {
+            setFieldText("2")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        three.setOnClickListener {
+            setFieldText("3")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        four.setOnClickListener {
+            setFieldText("4")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        five.setOnClickListener {
+            setFieldText("5")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        six.setOnClickListener {
+            setFieldText("6")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        seven.setOnClickListener {
+            setFieldText("7")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        eight.setOnClickListener {
+            setFieldText("8")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        nine.setOnClickListener {
+            setFieldText("9")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        l_bracket.setOnClickListener {
+            setFieldText("(")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        r_bracket.setOnClickListener {
+            setFieldText(")")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        divide.setOnClickListener {
+            setFieldText("/")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        multiply.setOnClickListener {
+            setFieldText("*")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        minus.setOnClickListener {
+            setFieldText("-")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        plus.setOnClickListener {
+            setFieldText("+")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        dot.setOnClickListener {
+            setFieldText(".")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        all_clear.setOnClickListener {
+            eline.setText("")
+        }
+
+        sin.setOnClickListener {
+            setFieldText("sin(")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        cos.setOnClickListener {
+            setFieldText("cos(")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        tan.setOnClickListener {
+            setFieldText("tan(")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        e.setOnClickListener {
+            setFieldText("e")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        ln.setOnClickListener {
+            setFieldText("ln(")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        log.setOnClickListener {
+            setFieldText("log(")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        percent.setOnClickListener {
+            setFieldText("%")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        sqrt.setOnClickListener {
+            setFieldText("sqrt(")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        pi.setOnClickListener {
+            setFieldText("π")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        exp.setOnClickListener {
+            setFieldText("^")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        factorial.setOnClickListener {
+            setFieldText("!")
+            scroll_line.scrollTo(eline.right, 0)
+        }
+
+        degrad.setOnClickListener {
+            if (degrad.text == "DEG") degrad.text = "RAD" else degrad.text = "DEG"
+        }
+
         backspace.setOnClickListener {
             val str = eline.text.toString()
             if (str.isNotEmpty()) {
