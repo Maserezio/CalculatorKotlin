@@ -9,7 +9,7 @@
     <com.jjoe64.graphview.GraphView
         android:id="@+id/graph"
         android:layout_width="match_parent"
-        android:layout_height="1sp"
+        android:layout_height="100sp"
         android:layout_gravity="center"
         android:layout_marginLeft="12sp"
         android:layout_marginTop="50sp"
@@ -19,32 +19,27 @@
     <EditText
         android:id="@+id/input"
         android:layout_width="match_parent"
-        android:layout_height="1sp"
+        android:layout_height="12sp"
         android:layout_weight="1"
-        android:text="sin(x)"
+        android:text="@string/graph_input_placeholder"
         android:textAlignment="center"
-        android:textStyle="bold|italic" />
+        android:textStyle="bold|italic"
+        android:inputType="textNoSuggestions"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="1sp"
+        android:layout_height="16sp"
         android:layout_weight="1"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/clear"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="5sp"
-            android:layout_weight="1"
-            android:text="AC" />
+            style="@style/OptButt"
+            android:text="@string/AC" />
 
         <Button
             android:id="@+id/build"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="5sp"
-            android:layout_weight="1"
+            style="@style/OptButt"
             android:text="@string/add_graph" />
     </LinearLayout>
 

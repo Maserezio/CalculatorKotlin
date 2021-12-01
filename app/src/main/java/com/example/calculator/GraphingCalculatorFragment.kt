@@ -1,5 +1,6 @@
 package com.example.calculator
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -48,6 +49,7 @@ class GraphingCalculatorFragment : Fragment() {
                     50000
                 )
             }
+            series.color = Color.rgb(90,178,241)
             graph.addSeries(series)
         }
 

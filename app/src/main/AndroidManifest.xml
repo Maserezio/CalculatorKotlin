@@ -14,7 +14,7 @@
             android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Calculator.NoActionBar">
+            android:theme="@style/Theme.Calculator">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

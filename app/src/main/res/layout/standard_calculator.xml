@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,11 +8,7 @@
 
     <HorizontalScrollView
         android:id="@+id/scroll_line"
-        android:layout_width="match_parent"
-        android:layout_height="16sp"
-        android:layout_marginTop="50dp"
-        android:layout_weight="1.65">
-
+        style="@style/InputHorizontalScroll">
         <TextView
             android:id="@+id/line"
             android:layout_width="wrap_content"
@@ -22,308 +17,126 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:textAlignment="viewEnd"
-            android:textColor="@color/black"
             android:textSize="55sp" />
     </HorizontalScrollView>
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1sp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+    <LinearLayout style="@style/CalcLayout">
 
         <Button
             android:id="@+id/all_clear"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="AC"
-            android:textSize="28sp"
-            app:iconPadding="5dp" />
+            style="@style/CalcBtn"
+            android:text="@string/AC" />
 
         <Button
             android:id="@+id/l_bracket"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="("
-            android:textSize="28sp"
-            app:iconPadding="5dp" />
+            style="@style/CalcBtn"
+            android:text="@string/lbracket" />
 
         <Button
             android:id="@+id/r_bracket"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text=")"
-            android:textSize="28sp"
-            app:iconPadding="5dp" />
+            style="@style/CalcBtn"
+            android:text="@string/rbracket" />
 
         <Button
             android:id="@+id/divide"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="/"
-            android:textSize="28sp"
-            app:iconPadding="5dp" />
+            style="@style/CalcBtn"
+            android:text="@string/divide" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+    <LinearLayout style="@style/CalcLayout">
 
         <Button
             android:id="@+id/seven"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="7"
-            android:textSize="28sp"
-            app:iconPadding="5dp" />
+            style="@style/CalcBtn"
+            android:text="@string/seven" />
 
         <Button
             android:id="@+id/eight"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="8"
-            android:textSize="28sp"
-            app:iconPadding="5dp" />
+            style="@style/CalcBtn"
+            android:text="@string/eight" />
 
         <Button
             android:id="@+id/nine"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="9"
-            android:textSize="28sp"
-            app:iconPadding="5dp" />
+            style="@style/CalcBtn"
+            android:text="@string/nine" />
 
         <Button
             android:id="@+id/multiply"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="*"
-            android:textSize="28sp"
-            app:iconPadding="5dp" />
+            style="@style/CalcBtn"
+            android:text="@string/multiple" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+    <LinearLayout style="@style/CalcLayout">
 
         <Button
             android:id="@+id/four"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="4"
-            android:textSize="28sp"
-            app:iconPadding="5dp" />
+            style="@style/CalcBtn"
+            android:text="@string/four" />
 
         <Button
             android:id="@+id/five"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="5"
-            android:textSize="28sp"
-            app:iconPadding="5dp" />
+            style="@style/CalcBtn"
+            android:text="@string/five" />
 
         <Button
             android:id="@+id/six"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="6"
-            android:textSize="28sp"
-            app:iconPadding="5dp" />
+            style="@style/CalcBtn"
+            android:text="@string/six" />
 
         <Button
             android:id="@+id/minus"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="-"
-            android:textSize="28sp"
-            app:iconPadding="5dp" />
+            style="@style/CalcBtn"
+            android:text="@string/minus" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+    <LinearLayout style="@style/CalcLayout">
 
         <Button
             android:id="@+id/one"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="1"
-            android:textSize="28sp"
-            app:iconPadding="5dp" />
+            style="@style/CalcBtn"
+            android:text="@string/one" />
 
         <Button
             android:id="@+id/two"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="2"
-            android:textSize="28sp"
-            app:iconPadding="5dp" />
+            style="@style/CalcBtn"
+            android:text="@string/two" />
 
         <Button
             android:id="@+id/three"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="3"
-            android:textSize="28sp"
-            app:iconPadding="5dp" />
+            style="@style/CalcBtn"
+            android:text="@string/three" />
 
         <Button
             android:id="@+id/plus"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="+"
-            android:textSize="28sp"
-            app:iconPadding="5dp" />
+            style="@style/CalcBtn"
+            android:text="@string/plus" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+    <LinearLayout style="@style/CalcLayout">
 
         <Button
             android:id="@+id/zero"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="0"
-            android:textSize="28sp"
-            app:iconPadding="5dp" />
+            style="@style/CalcBtn"
+            android:text="@string/zero" />
 
         <Button
             android:id="@+id/dot"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="."
-            android:textSize="28sp"
-            app:iconPadding="5dp" />
+            style="@style/CalcBtn"
+            android:text="@string/dot" />
 
         <Button
             android:id="@+id/backspace"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="⌫"
-            android:textSize="28sp"
-            app:iconPadding="5dp" />
+            style="@style/CalcBtn"
+            android:text="@string/backspace" />
 
         <Button
             android:id="@+id/equals"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:insetLeft="5dp"
-            android:insetTop="5dp"
-            android:insetRight="5dp"
-            android:insetBottom="5dp"
-            android:text="="
-            android:textSize="28sp"
-            app:iconPadding="5dp" />
+            style="@style/CalcBtn"
+            android:text="@string/equal" />
 
     </LinearLayout>
 
