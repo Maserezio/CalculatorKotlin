@@ -6,7 +6,7 @@
         <item name="colorPrimaryVariant">@color/input_light</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondary">@color/operator</item>
         <item name="colorSecondaryVariant">@color/AC</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
